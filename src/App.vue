@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-breeze-cream text-slate-900">
+  <div>
     <AppHeader />
     <RouterView />
     <SiteFooter />

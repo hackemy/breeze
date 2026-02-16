@@ -1,26 +1,23 @@
 <template>
-  <section id="menu" class="space-y-10">
-    <div class="flex flex-wrap items-baseline justify-between gap-6">
-      <div>
-        <p class="text-sm uppercase tracking-[0.4em] text-breeze-gold">Menu highlights</p>
-        <h2 class="mt-2 font-heading text-4xl text-breeze-blue">All-day indulgence</h2>
-      </div>
-      <a
-        :href="menuUrl"
-        target="_blank"
-        rel="noreferrer"
-        class="btn btn-secondary"
-      >
-        View full menu
-      </a>
-    </div>
-
-    <div class="grid gap-8 md:grid-cols-2">
+  <section class="site-shell">
+    <div class="menu-grid">
       <MenuCard
         v-for="category in categories"
         :key="category.id"
         v-bind="category"
       />
+    </div>
+
+    <div class="site-divider" />
+
+    <div class="flex justify-center">
+      <a :href="menuUrl" target="_blank" rel="noreferrer" class="full-menu-button">
+        Full Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14" />
+          <path d="m13 6 6 6-6 6" />
+        </svg>
+      </a>
     </div>
   </section>
 </template>

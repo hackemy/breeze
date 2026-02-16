@@ -1,52 +1,42 @@
 <template>
-  <footer class="mt-20 bg-breeze-blue text-white">
-    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[2fr,1fr,1fr]">
-      <div class="space-y-6">
-        <p class="text-sm uppercase tracking-[0.4em] text-breeze-gold">Find us</p>
-        <ul class="space-y-4 text-lg">
-          <li>
-            <a :href="`tel:${contact.phone.replace(/\s+/g, '')}`" class="flex items-center gap-3">
-              <span class="text-breeze-gold">Call</span>{{ contact.phone }}
-            </a>
-          </li>
-          <li>
-            <a :href="`mailto:${contact.mail}`" class="flex items-center gap-3">
-              <span class="text-breeze-gold">Email</span>{{ contact.mail }}
-            </a>
-          </li>
-          <li>
-            <a :href="contact.mapsUrl" target="_blank" rel="noreferrer" class="flex items-center gap-3">
-              <span class="text-breeze-gold">Visit</span>{{ contact.address }}
-            </a>
-          </li>
-          <li>
-            <a :href="contact.whatsappUrl" target="_blank" rel="noreferrer" class="flex items-center gap-3">
-              <span class="text-breeze-gold">WhatsApp</span>{{ contact.whatsapp }}
-            </a>
-          </li>
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div>
+        <p class="footer-heading">Find us</p>
+        <ul class="footer-list">
+          <li><a class="footer-link" :href="`tel:${contact.phone.replace(/\s+/g, '')}`">(+30) 2822023324</a></li>
+          <li><a class="footer-link" :href="`mailto:${contact.mail}`">info@breezecafe.gr</a></li>
+          <li><a class="footer-link" :href="contact.mapsUrl" target="_blank" rel="noreferrer">Paraliaki, Kissamos</a></li>
+          <li><a class="footer-link" :href="contact.whatsappUrl" target="_blank" rel="noreferrer">6945486553</a></li>
         </ul>
       </div>
 
       <div>
-        <p class="text-sm uppercase tracking-[0.4em] text-breeze-gold">Information</p>
-        <ul class="mt-4 space-y-3 text-sm uppercase tracking-[0.3em] text-white/80">
-          <li><a href="https://breezecafe.gr/about-us/" target="_blank" rel="noreferrer">About us</a></li>
-          <li><a href="https://breezecafe.gr/gallery/" target="_blank" rel="noreferrer">Gallery</a></li>
-          <li><a href="https://breezecafe.gr/contact-us/" target="_blank" rel="noreferrer">Make a reservation</a></li>
+        <p class="footer-heading">Information</p>
+        <ul class="footer-list">
+          <li><a class="footer-link" href="https://breezecafe.gr/about-us/" target="_blank" rel="noreferrer">About us</a></li>
+          <li><a class="footer-link" href="https://breezecafe.gr/gallery/" target="_blank" rel="noreferrer">Gallery</a></li>
+          <li><a class="footer-link" href="https://breezecafe.gr/contact-us/" target="_blank" rel="noreferrer">Contact us</a></li>
         </ul>
       </div>
 
-      <div class="space-y-4">
-        <p class="text-sm uppercase tracking-[0.4em] text-breeze-gold">Follow us</p>
-        <div class="flex gap-3 text-2xl">
-          <a :href="contact.instagram" target="_blank" rel="noreferrer"></a>
-          <a :href="contact.facebook" target="_blank" rel="noreferrer"></a>
-          <a :href="contact.youtube" target="_blank" rel="noreferrer"></a>
-        </div>
-        <div class="rounded-3xl border border-white/20 p-6 text-center">
-          <p class="text-4xl font-bold">4.9</p>
-          <p class="text-sm uppercase tracking-[0.5em] text-white/70">Top Rated 2026</p>
-        </div>
+      <div class="footer-cta">
+        <button class="make-reservation" type="button">Make a reservation</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        <p class="footer-heading">Follow us</p>
+        <ul class="footer-list">
+          <li><a class="footer-link" :href="contact.instagram" target="_blank" rel="noreferrer">breeze_cafebar</a></li>
+          <li><a class="footer-link" :href="contact.facebook" target="_blank" rel="noreferrer">Breeze cafe bar</a></li>
+          <li><a class="footer-link" :href="contact.youtube" target="_blank" rel="noreferrer">Breeze Roof</a></li>
+        </ul>
+      </div>
+      <div class="badge-card">
+        <strong>★★★★☆ 4.9</strong>
+        <span>Top Rated Restaurant 2026</span>
       </div>
     </div>
   </footer>
