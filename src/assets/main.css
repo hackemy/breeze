@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background-color: #f4f3ef;
+  font-family: 'Manrope', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  @apply bg-breeze-cream text-slate-800 min-h-screen;
+}
+
+a {
+  @apply text-breeze-teal hover:text-breeze-blue transition-colors;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-full border border-transparent px-5 py-3 text-sm font-semibold uppercase tracking-widest transition-all;
+}
+
+.btn-primary {
+  @apply bg-breeze-blue text-white hover:bg-breeze-teal shadow-card;
+}
+
+.btn-secondary {
+  @apply border-breeze-blue text-breeze-blue hover:bg-white;
+}
