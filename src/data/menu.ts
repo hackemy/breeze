@@ -11,7 +11,7 @@ export const menuCategories: MenuCategory[] = [
     id: 'coffee',
     title: 'Coffee and Beverages',
     description:
-      'Rich espressos, smooth lattes, refreshing milkshakes, plus hot and cold beverages to start the day right.',
+      'Rich espressos, smooth lattes, refreshing milkshakes, plus hot and cold beverages — with the signature Nescafé frappé now €12.',
     image: new URL('@/assets/images/breeze-coffee.png', import.meta.url).href,
     alt: 'Coffee drinks served at Breeze Café'
   },
